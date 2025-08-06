@@ -1,3 +1,4 @@
+/*
 pipeline{
     agent any
     tools{
@@ -6,7 +7,8 @@ pipeline{
     stages{
         stage("SCM Checkout"){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/soni05ra/jenkins-ci-cd-demo.git']])
+                checkout scmGit(branches: [[name: '*//*
+main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/soni05ra/jenkins-ci-cd-demo.git']])
             }
         }
         stage("Build"){
@@ -17,10 +19,12 @@ pipeline{
             }
         }
         stage("Deploy WAR"){
-            steps{
-                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'admin1', path: '', url: 'http://localhost:8081/')], contextPath: 'jenkinsCiCd', war: '**/*.war'
-            }
-        }
+                    steps{
+                        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'admin1', path: '', url: 'http://localhost:8081/')], contextPath: 'jenkinsCiCd', war: '** /*
+*/
+/*.war'
+                    }
+                }
     }
     post{
         always{
@@ -31,4 +35,4 @@ pipeline{
 //SCM checkout
 //Build
 //deploy war
-//email
+//email */
