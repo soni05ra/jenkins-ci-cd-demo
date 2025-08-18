@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: userapp-app-container
-          image: 'soni05ra/user-service:1.0.0-7'
+          image: 'soni05ra/user-service:1.0.0-13'
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9091
