@@ -1,7 +1,7 @@
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority: certs/ca.pem
+    certificate-authority: C:/ProgramData/Jenkins/.jenkins/workspace/user-service-k8s/certs/ca.pem
     server: https://127.0.0.1:63354
   name: minikube
 contexts:
@@ -16,5 +16,5 @@ preferences: {}
 users:
 - name: minikube
   user:
-    client-certificate: certs/cert.pem
-    client-key: certs/key.pem
+    client-certificate: C:/ProgramData/Jenkins/.jenkins/workspace/user-service-k8s/certs/cert.pem
+    client-key: C:/ProgramData/Jenkins/.jenkins/workspace/user-service-k8s/certs/key.pem
